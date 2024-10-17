@@ -1,0 +1,73 @@
+﻿<Window x:Class="Layouts.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Layouts"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800"
+        Loaded="Window_Loaded">
+  <DockPanel>
+    <Menu DockPanel.Dock="Top">
+      <MenuItem Header="File">
+        <MenuItem Header="Open" />
+        <MenuItem Header="Close" />
+      </MenuItem>
+      <MenuItem Header="Edit">
+        <MenuItem Header="Copy" />
+        <MenuItem Header="Paste" />
+      </MenuItem>
+    </Menu>
+    <StackPanel x:Name="ToolbarTop" DockPanel.Dock="Top" Orientation="Horizontal">
+    </StackPanel>
+    <Grid DockPanel.Dock="Bottom" Background="Blue" >
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="1*"/>
+        <ColumnDefinition Width="1*"/>
+        <ColumnDefinition Width="1*"/>
+      </Grid.ColumnDefinitions>
+      <Label Grid.Column="0" Margin="5">last action</Label>
+      <Label Grid.Column="1" Margin="5">C:\Temp\Dummy</Label>
+      <Label Grid.Column="2" Margin="5">Line 10 Column 20</Label>
+    </Grid>
+    <Grid DockPanel.Dock="Right" Width="180" Background="LightSteelBlue" >
+      <Grid.RowDefinitions>
+        <RowDefinition Height="1*"/>
+        <RowDefinition Height="1*"/>
+      </Grid.RowDefinitions>
+      <StackPanel Grid.Row="0" Margin="5">
+        <Label Margin="5">Solution Dummy</Label>
+        <Button Margin="5">xxx</Button>
+        <Button Margin="5">yyy</Button>
+      </StackPanel>
+      <GridSplitter Grid.Row="1" Height="5" HorizontalAlignment="Stretch" VerticalAlignment="Top" Background="Gray" />
+      <StackPanel Grid.Row="1" Margin="5">
+        <Label>Properties</Label>
+        <DockPanel >
+          <Label >Text:</Label>
+          <TextBox DockPanel.Dock="Right" HorizontalAlignment="Right" Margin="5,5,5,0" Width="100" >Hallo</TextBox>
+        </DockPanel>
+        <DockPanel >
+          <Label DockPanel.Dock="Left">Width:</Label>
+          <TextBox DockPanel.Dock="Right" HorizontalAlignment="Right" Margin="5,5,5,0" Width="100" >100</TextBox>
+        </DockPanel>
+      </StackPanel>
+    </Grid>
+    <Grid x:Name="Toolbox" DockPanel.Dock="Left" Width="110" Background="LightSteelBlue">
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="3*"/>
+        <ColumnDefinition Width="7*"/>
+      </Grid.ColumnDefinitions>
+      <Grid.RowDefinitions>
+        <RowDefinition Height="35"/>
+        <RowDefinition Height="35"/>
+        <RowDefinition Height="35"/>
+        <RowDefinition Height="35"/>
+        <RowDefinition Height="35"/>
+        <RowDefinition Height="35"/>
+      </Grid.RowDefinitions>
+
+    </Grid>
+    <Button>Content</Button>
+  </DockPanel>
+</Window>
